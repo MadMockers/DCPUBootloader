@@ -101,7 +101,7 @@ write_screen:
             INT BBOS_IRQ_MAGIC
         SET A, POP
         IFE A, 0
-            ADD PC write_screen_done-src5
+            ADD PC, write_screen_done-src5
 src5:
 
         ; write string
