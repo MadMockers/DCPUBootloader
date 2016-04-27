@@ -91,7 +91,7 @@ done:
     SET PC, 0
 
 die:
-    SET PC, die
+    SUB PC, 1
 
 write_screen:
     SET PUSH, A
