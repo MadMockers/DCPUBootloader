@@ -101,7 +101,8 @@ write_screen:
             INT BBOS_IRQ_MAGIC
         SET A, POP
         IFE A, 0
-            SET PC, .done
+            ADD PC write_screen_done-src5
+src5:
 
         ; write string
         SET A, 0x1004
@@ -109,7 +110,7 @@ write_screen:
         SET PUSH, 1
             INT BBOS_IRQ_MAGIC
         ADD SP, 2
-.done:
+write_screen_done:
     SET A, POP
     SET PC, POP
     
